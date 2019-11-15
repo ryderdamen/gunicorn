@@ -2010,3 +2010,15 @@ class PasteGlobalConf(Setting):
 
         .. versionadded:: 19.7
         """
+
+
+class DontStripHeaderSpaces(Setting):
+    name = "dont_strip_header_spaces"
+    section = "Server Mechanics"
+    cli = ["--dont-strip-header-spaces"]
+    validator = validate_bool
+    action = "store_true"
+    default = False
+    desc = """\
+        Dont strip spaces in headers
+        """
