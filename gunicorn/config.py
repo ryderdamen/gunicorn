@@ -1950,13 +1950,13 @@ class PasteGlobalConf(Setting):
         """
 
 
-class DontStripHeaderSpaces(Setting):
-    name = "dont_strip_header_spaces"
+class StripHeaderSpaces(Setting):
+    name = "strip_header_spaces"
     section = "Server Mechanics"
-    cli = ["--dont-strip-header-spaces"]
+    cli = ["--strip-header-spaces"]
     validator = validate_bool
-    action = "store_true"
-    default = False
+    action = "store_false"
+    default = True
     desc = """\
-        Dont strip spaces in headers
+        Strip spaces in headers
         """
